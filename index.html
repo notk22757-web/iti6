@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CBT Student Portal</title>
+<style>
+body{font-family:Arial;max-width:900px;margin:30px auto;padding:20px;background:#f8fafc}
+.card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+input,button{width:100%;padding:12px;margin:8px 0;font-size:16px}
+button{background:#1e3a8a;color:#fff;border:none;border-radius:8px;cursor:pointer}
+.option{display:block;padding:12px;border:1px solid #ddd;border-radius:8px;margin:8px 0;cursor:pointer}
+</style></head>
+<body>
+<div class="card" id="authBox">
+  <h1>Student Portal</h1>
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="login()">Login</button>
+  <p id="msg"></p>
+  <p><a href="admin.html">Go to Admin Portal</a></p>
+</div>
+
+<div class="card" id="examBox" style="display:none">
+  <h2 id="qCounter"></h2>
+  <div id="questionText"></div>
+  <div id="options"></div>
+  <button onclick="prevQuestion()">Previous</button>
+  <button onclick="nextQuestion()">Next</button>
+  <button onclick="submitExam()">Submit Exam</button>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body></html>

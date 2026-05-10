@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Portal</title>
+<style>
+body{font-family:Arial;max-width:800px;margin:30px auto;padding:20px;background:#f8fafc}
+.card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+input,button{width:100%;padding:12px;margin:8px 0;font-size:16px}
+button{background:#1e3a8a;color:#fff;border:none;border-radius:8px;cursor:pointer}
+</style></head>
+<body>
+<div class="card" id="loginBox">
+  <h1>Admin Login</h1>
+  <input id="adminPassword" type="password" placeholder="Password">
+  <button onclick="adminLogin()">Login</button>
+  <p>Password: <strong>admin123</strong></p>
+</div>
+<div class="card" id="adminPanel" style="display:none">
+  <h1>Upload Questions from JSON</h1>
+  <input id="jsonFile" type="file" accept=".json">
+  <button onclick="uploadQuestionsJSON()">Upload JSON</button>
+  <h2>Results</h2>
+  <button onclick="viewResults()">View All Results</button>
+  <pre id="resultsBox"></pre>
+</div>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body></html>
